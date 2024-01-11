@@ -30,3 +30,9 @@ To begin our project, we import these libraries:
 After making the necessary imports, we load data on Tata Global Beverage’s past stock prices. From the data, we select the values of the first and second columns (“Open” and “High” respectively) as our training dataset. The “Open” column represents the opening price for shares that day and the “High” column represents the highest price shares reached that day.
 
 ![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/8a565e59-dcfa-4025-960b-3d48666b16f4)
+
+
+
+
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/7aeb4197-622e-4900-a6f3-c71e9ec60c77)
+
