@@ -1,4 +1,6 @@
-# [Under Construction]Predicting South African GDP using a Autoregressive Distributed Lag Stationarity (ARDL) Model
+# [Under Construction] Predicting South African GDP using a Autoregressive Distributed Lag Stationarity (ARDL) Model
+
+![dominik-luckmann-SInhLTQouEk-unsplash](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/7daae3cc-9afd-473e-901d-87726562495b)
 
 
 ***
@@ -60,6 +62,29 @@ The next step is to visualize the data. We can use various types of plots to vis
 
 The first step of empirical research is to check for stationarity and if there’s any unit root process on the variables. Otherwise, the regression might be spurious
 #### 4.1 Diagnostics for GDP
+
+* We'll create a new dataframe without 2020 - 2022
+* This is the sample we'll estimate the model on
+* We have to do this twice
+* Once for GDP only (1960 - 2020)
+* Again for GDP reer (1970 - 2020)
+
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/ad35125f-26a6-45f8-81d0-15cd6c34f763)
+
+*  R^2 is very high - 95% of variation in GDP can be explained by time
+*  Time trend will be a problem
+*  Does detrended GDP look any better?
+##### Detrending the GDP variable
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/f9b59072-675f-4295-bccc-1898f3753afe)
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/76bff8d2-1f1e-4704-83d6-2df0117cd5cb)
+* This seems to have got rid of the time trend
+* However non-stationarity looks to be a problem
+
+#####  To take care of non-stationarity, let's do two transformations
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/5fcd38b7-f1be-4b85-817b-8792dc41e5e0)
+
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/765d1b75-a3ac-4593-844a-65f6c6000812)
+
 
 #### 4.2 Diagnostics for Investment
 
