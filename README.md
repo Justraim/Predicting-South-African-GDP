@@ -30,9 +30,15 @@ To begin our project, we import these libraries:
 * sandwich
 
 After making the necessary imports, we load data on Tata Global Beverage’s past stock prices. From the data, we select the values of the first and second columns (“Open” and “High” respectively) as our training dataset. The “Open” column represents the opening price for shares that day and the “High” column represents the highest price shares reached that day.
-
+#### GDP Variable
 ![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/8a565e59-dcfa-4025-960b-3d48666b16f4)
 
+#### Investment
+ ![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/875e94c3-3f39-4e04-90b0-d4ffe5c7cda8)
+
+
+#### Real Effective Exchange Rate
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/e92c1f52-edd1-4473-ab9e-33213d5bb75f)
 
 
 ## 3. Data Visualisation
@@ -88,18 +94,60 @@ The first step of empirical research is to check for stationarity and if there�
 
 #### 4.2 Diagnostics for Investment
 
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/cad8ebb8-7682-469e-a29c-b382e846cd88)
+
+* R^2 is very high - 95% of variation in GDP can be explained by time
+* Time trend will be a problem
+* Does detrended GDP look any better?
+##### Detrending the GDP variable
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/ab922096-ba75-4064-820f-ebb4ee0d88d3)
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/1195d488-0f68-4a0e-83a7-d59e35d38403)
+
+* This seems to have got rid of the time trend
+* However non-stationarity looks to be a problem
+##### To take care of non-stationarity, let's do two transformations
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/c3193fe6-53ce-4d56-a39e-4d77790b509d)
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/d9911514-f34c-4248-8975-a14f0afc029b)
 
 #### 4.3 Diagnostics for Real Effective Exchange Rate
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/bbef981a-2132-44d9-8a2a-4cdc98ce62be)
+
+* R^2 is very high - 83% of variation in GDP can be explained by time
+* Time trend will be a problem
+* Does detrended reer look any better?
+##### Detrending the GDP variable
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/e6a361df-ace6-4c5d-8146-92556d09ca5b)
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/2727ae4e-ff32-447b-a482-34dc59eef89d)
+* This seems to have got rid of the downward time trend for half of the data
+* But there is now a clear upward trend in half of the data!
+* In addition to there still being a time trend, non-stationarity will also be a problem
+
+##### To take care of non-stationarity, let's do two transformations
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/08dea092-4a00-40ef-be3f-468de760892a)
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/64211de5-fab0-43a8-9028-7303c5e50036)
 
 
 ## 5. Model Specifications
+I prefer using log differences - gives a % change interpretation
 #### Model 1: AR(4)
+
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/427265fc-4cdc-442b-a068-933acf3d1670)
+
 
 
 #### Model 2: ARDL(2,2)
 
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/4a9f7cc4-e8b6-4af3-9be1-e10cd81bc256)
+
 
 #### Model 3: ARDL(2,2,2)
+
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/e1736361-4954-45c9-8b12-e05d853f9e5b)
+
+#### All the Models
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/2810c408-9fc3-4e65-8533-b683ee8e552c)
+![image](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/55a9ee2a-6e78-43c6-8aeb-f8ca74c16d77)
+
 
 ## 6. Forecasting and Analysis
 
