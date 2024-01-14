@@ -1,5 +1,5 @@
 # [Under Construction]Predicting South African GDP using a Autoregressive Distributed Lag Stationarity (ARDL) Model
-https://unsplash.com/photos/blue-and-red-cargo-ship-on-dock-during-daytime-SInhLTQouEk
+
 
 ***
 The data on GDP (Gross Domestic Product) is regarded as the important index for assessing national economic development and for judging the operating status of macroeconomics. Forecasting future economic outcomes is a vital component of the decision-making process in central banks for all countries. Therefore, accurate forecasting of GDP is an interesting topic for researchers and policy makers in the field of business in general and economics to frame proper economic development strategies, economic policies, and to allocate funds according to diverse priorities of the government. 
