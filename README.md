@@ -1,4 +1,4 @@
-# [Under Construction] Predicting South African GDP using a Autoregressive Distributed Lag Stationarity (ARDL) Model
+# Predicting South African GDP using a Autoregressive Distributed Lag Stationarity (ARDL) Model
 
 ![dominik-luckmann-SInhLTQouEk-unsplash](https://github.com/Justraim/Predicting-South-African-GDP/assets/42674004/7daae3cc-9afd-473e-901d-87726562495b)
 
